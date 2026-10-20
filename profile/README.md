@@ -4,6 +4,12 @@ Welcome to the GitHub organization of the **Urakawa Group at TU Delft**.
 
 This organization hosts the software and digital infrastructure that keeps our laboratory running: operating and monitoring experimental setups, and processing the data they produce.
 
+## Public repositories
+
+| Repository | Package | Purpose |
+|---|---|---|
+| [urakawa-group/lab-data-parser](https://github.com/urakawa-group/lab-data-parser) | `lab_data_parser` | read and process raw instrument data |
+
 ## Software
 
 ### Laboratory software
