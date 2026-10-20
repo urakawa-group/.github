@@ -21,11 +21,12 @@ The group website, integrations and automation that connect the other tools.
 
 ## Repository naming
 
-Every repository name follows one pattern, so that its purpose is clear from the name alone and related repositories sort next to each other:
-
-```
-<area>-<category>-<name>[-<part>]
-```
+> [!IMPORTANT]
+> Every repository name follows **one pattern**, so that its purpose is clear from the name alone and related repositories sort next to each other:
+>
+> ```
+> <area>-<category>-<name>[-<part>]
+> ```
 
 | element | meaning | examples |
 |---|---|---|
@@ -34,7 +35,16 @@ Every repository name follows one pattern, so that its purpose is clear from the
 | `name` | the actual name of the project or setup | `parser`, `setup1` |
 | `part` | optional; one repository of a project that needs several | `gc-helper` |
 
-`lab-data-parser`, for example, is **lab** software, in the **data** category, called **parser**.
+> [!NOTE]
+> **Reading a name, by example**
+>
+> ```
+> lab  -  data  -  parser
+>  │       │        │
+>  │       │        └── name:     the parser project
+>  │       └─────────── category: handles measured data
+>  └─────────────────── area:     laboratory software
+> ```
 
 ### Prefixes in use
 
@@ -49,11 +59,12 @@ Every repository name follows one pattern, so that its purpose is clear from the
 | `web-site-` | the group website and other public pages | `web-site-group` |
 | `web-hooks-` | integrations and automation between services: webhooks, bots, scheduled jobs, notifications | `web-hooks-teams` |
 
-If none of these fit, propose a new prefix in the same `<area>-<category>-` form before creating the repository, and add it to this table.
+> [!TIP]
+> None of these fit? Propose a new prefix in the same `<area>-<category>-` form **before** creating the repository, and add it to this table.
 
 ### Projects with several repositories
 
-When one project needs more than one repository, all of them start with the project's base name, and each additional repository appends its part:
+When one project needs more than one repository, all of them start with the project's base name, and each additional repository appends its part. That way they always sort together:
 
 ```
 lab-control-setup1              the main control software of setup 1
@@ -63,10 +74,18 @@ lab-control-setup1-dashboard    a dashboard that belongs to the same setup
 
 ### General rules
 
+| ✅ do | ❌ don't |
+|---|---|
+| `lab-data-parser` | `Lab_Data_Parser`, `lab data parser` |
+| `research-modeling-kinetics` | `research-mod-kin` |
+| `research-modeling-kinetics` | `phd-kinetics-jsommer` |
+
 - Lowercase letters, digits and hyphens only; no spaces, underscores or capitals.
 - Full words rather than abbreviations, except for established names of a technique or instrument (`gc`, `ms`, `xrd`, `drifts`).
-- No personal names, initials or degree programmes (`phd`, `msc`) in repository names. Repositories belong to the group and outlive any single project.
 - Python packages inside a repository use the same name with underscores (`lab-data-parser` installs `lab_data_parser`).
+
+> [!WARNING]
+> **No personal names, initials or degree programmes** (`phd`, `msc`) in repository names. Repositories belong to the group and outlive any single project or person.
 
 ## Contributing
 
@@ -78,4 +97,5 @@ Please consult the README and contribution guidelines of the relevant repository
 
 To get access to the organization or to a repository, contact **Julius Sommer** or **Manoj Coppens**.
 
-For questions about a particular project, please contact its maintainers or open an issue in the corresponding repository.
+> [!NOTE]
+> For questions about a particular project, please contact its maintainers or open an issue in the corresponding repository.
