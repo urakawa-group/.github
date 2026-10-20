@@ -2,22 +2,22 @@
 
 Welcome to the GitHub organization of the **Urakawa Group at TU Delft**.
 
-This organization hosts software, tools and digital infrastructure developed and maintained by the group, supporting our laboratory operations, research activities and scientific collaboration.
+This organization hosts the software and digital infrastructure that keeps our laboratory running: operating and monitoring experimental setups, and processing the data they produce.
 
 ## Software
 
 ### Laboratory software
-Software for operating, monitoring and supporting laboratory equipment and experimental setups.
+The main focus of this organization. Software for operating, monitoring and supporting laboratory equipment and experimental setups, and for turning raw instrument output into usable data.
 
 - **Control:** equipment interfaces and control applications for experimental setups.
 - **Monitoring:** dashboards, logging and alarms that watch a running setup.
 - **Data processing:** instrument output parsers, data conversion, data cleaning and general-purpose data processing tools.
 
-### Research software
-Scientific models, simulations, numerical methods and computational tools supporting our research.
-
 ### Web and infrastructure
 The group website, integrations and automation that connect the other tools.
+
+> [!NOTE]
+> **What about research code?** Models, simulations and analysis code from individual research projects usually stay in their authors' own repositories for now. If such code becomes shared and maintained by the group, it can move here under a `research-` prefix (see [Possible future prefixes](#possible-future-prefixes)).
 
 ## Repository naming
 
@@ -30,8 +30,8 @@ The group website, integrations and automation that connect the other tools.
 
 | element | meaning | examples |
 |---|---|---|
-| `area` | where the software lives | `lab`, `research`, `web` |
-| `category` | what kind of software it is within that area | `control`, `monitoring`, `data`, `modeling`, `site`, `hooks` |
+| `area` | where the software lives | `lab`, `web` |
+| `category` | what kind of software it is within that area | `control`, `monitoring`, `data`, `site`, `hooks` |
 | `name` | the actual name of the project or setup | `parser`, `setup1` |
 | `part` | optional; one repository of a project that needs several | `gc-helper` |
 
@@ -53,14 +53,21 @@ The group website, integrations and automation that connect the other tools.
 | `lab-control-` | software that operates equipment or a setup: instrument drivers, control applications, sequence and recipe runners | `lab-control-setup1` |
 | `lab-monitoring-` | software that watches a setup without controlling it: live dashboards, data loggers, alarms and notifications | `lab-monitoring-setup1` |
 | `lab-data-` | software that handles measured data after the fact: instrument file parsers, conversion, cleaning, processing | `lab-data-parser` |
-| `research-modeling-` | scientific models: kinetics, thermodynamics, reactor models, fitting of physical models | `research-modeling-kinetics` |
-| `research-analysis-` | analysis and evaluation workflows of research data, figures and reproducible notebooks | `research-analysis-drifts` |
-| `research-simulation-` | numerical simulations and computational studies (e.g. CFD, DFT workflows) | `research-simulation-reactor` |
 | `web-site-` | the group website and other public pages | `web-site-group` |
 | `web-hooks-` | integrations and automation between services: webhooks, bots, scheduled jobs, notifications | `web-hooks-teams` |
 
 > [!TIP]
 > None of these fit? Propose a new prefix in the same `<area>-<category>-` form **before** creating the repository, and add it to this table.
+
+### Possible future prefixes
+
+Not in use yet. If shared research code moves into the organization later, these are the suggested prefixes:
+
+| prefix | what it would be for | example |
+|---|---|---|
+| `research-modeling-` | scientific models: kinetics, thermodynamics, reactor models, fitting of physical models | `research-modeling-kinetics` |
+| `research-analysis-` | analysis and evaluation workflows of research data, figures and reproducible notebooks | `research-analysis-drifts` |
+| `research-simulation-` | numerical simulations and computational studies (e.g. CFD, DFT workflows) | `research-simulation-reactor` |
 
 ### Projects with several repositories
 
@@ -77,8 +84,8 @@ lab-control-setup1-dashboard    a dashboard that belongs to the same setup
 | ✅ do | ❌ don't |
 |---|---|
 | `lab-data-parser` | `Lab_Data_Parser`, `lab data parser` |
-| `research-modeling-kinetics` | `research-mod-kin` |
-| `research-modeling-kinetics` | `phd-kinetics-jsommer` |
+| `lab-monitoring-setup1` | `lab-mon-s1` |
+| `lab-data-parser` | `phd-parser-jsommer` |
 
 - Lowercase letters, digits and hyphens only; no spaces, underscores or capitals.
 - Full words rather than abbreviations, except for established names of a technique or instrument (`gc`, `ms`, `xrd`, `drifts`).
